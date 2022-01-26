@@ -23,4 +23,8 @@
     <PopularMovies {popular}/>
 </section>
 
+<style>
+
+</style>
+
 
