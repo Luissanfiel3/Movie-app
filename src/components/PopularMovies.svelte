@@ -4,15 +4,64 @@
     import MovieCard from "./MovieCard.svelte";
 </script>
 
-<h3>Popular Movies</h3>
 
-<div class="popular-movies">
-    {#each popular as movie}
-        <MovieCard {movie}/>
-    {/each}
+<div class="bg-gray-100">
+    <div class="container max-w-lg px-4 py-6 mx-auto text-left md:max-w-none md:text-center">
+        <h1 class="text-5xl font-extrabold leading-10 tracking-tight text-left text-gray-900 md:text-center sm:leading-none md:text-6xl lg:text-7xl">
+            <span class="inline">The Movie </span> <span
+                class=" text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 to-indigo-500 ">Database</span>
+        </h1>
+    </div>
+    <div class="max-w-2xl mx-auto py-2 px-4 sm:py-4 sm:px-6 lg:max-w-7xl lg:px-8">
+
+
+        <!-- image search box -->
+
+
+        <div class="bg-white items-center justify-between w-full flex rounded-full shadow-lg p-2 mb-5 sticky"
+             style="top: 5px">
+
+            <div>
+
+                <div class="p-2 mr-1 rounded-full hover:bg-gray-100 cursor-pointer">
+
+                    <svg class="h-6 w-6 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                         fill="currentColor">
+                        <path fill-rule="evenodd"
+                              d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+                              clip-rule="evenodd"/>
+                    </svg>
+
+                </div>
+
+            </div>
+
+            <input class="font-bold uppercase rounded-full w-full py-4 pl-4 text-gray-700 bg-gray-100 leading-tight focus:outline-none focus:shadow-outline lg:text-sm text-xs"
+                   type="text" placeholder="Search">
+
+            <div class="bg-gray-700 p-2 hover:bg-blue-400 cursor-pointer mx-2 rounded-full">
+
+                <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                     fill="currentColor">
+                    <path fill-rule="evenodd"
+                          d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                          clip-rule="evenodd"/>
+                </svg>
+
+            </div>
+
+        </div>
+
+        <div class="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+            {#each popular as movie}
+                <MovieCard {movie}/>
+            {/each}
+        </div>
+    </div>
 </div>
 
-<style>
+
+<!--<style>
     h3 {
         padding: 0 1rem;
     }
@@ -23,5 +72,5 @@
         grid-column-gap: 1rem;
         grid-row-gap: 2rem;
     }
-</style>
+</style>-->
 

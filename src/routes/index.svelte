@@ -5,7 +5,7 @@
         );
 
         const data = await res.json();
-        console.log(data);
+        /*console.log(data);*/
         if (res.ok) {
             return {
                 props: {popular: data.results}
@@ -15,13 +15,15 @@
 </script>
 
 <script>
+
     import PopularMovies from  '../components/PopularMovies.svelte';
+    import NavComponent from "../components/NavComponent.svelte";
     export let popular;
 </script>
 
-<section>
-    <PopularMovies {popular}/>
-</section>
+<NavComponent />
+<PopularMovies {popular}/>
+
 
 <style>
 
