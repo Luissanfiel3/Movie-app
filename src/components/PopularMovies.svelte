@@ -17,10 +17,8 @@
 
         <!-- image search box -->
 
-
         <div class="bg-white items-center justify-between w-full flex rounded-full shadow-lg p-2 mb-5 sticky"
              style="top: 5px">
-
             <div>
 
                 <div class="p-2 mr-1 rounded-full hover:bg-gray-100 cursor-pointer">
@@ -52,7 +50,7 @@
 
         </div>
 
-        <div class="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+        <div class="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-5 xl:gap-x-8">
             {#each popular as movie}
                 <MovieCard {movie}/>
             {/each}
@@ -60,17 +58,4 @@
     </div>
 </div>
 
-
-<!--<style>
-    h3 {
-        padding: 0 1rem;
-    }
-
-    .popular-movies {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        grid-column-gap: 1rem;
-        grid-row-gap: 2rem;
-    }
-</style>-->
 
