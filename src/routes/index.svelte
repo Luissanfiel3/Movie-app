@@ -32,8 +32,5 @@
     <PopularMovies {popular}/>
 </div>
 <Footer/>
-<style>
-
-</style>
 
 
