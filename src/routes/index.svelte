@@ -15,16 +15,25 @@
 
 <script>
 
-    import PopularMovies from  '../components/PopularMovies.svelte';
+    import PopularMovies from '../components/PopularMovies.svelte';
     import NavComponent from "../components/NavComponent.svelte";
     import Footer from "../components/Footer.svelte";
+    import SeachMovies from "../components/SeachMovies.svelte";
+    import HomeTitle from "../components/HomeTitle.svelte";
+
     export let popular;
 </script>
 
-<NavComponent />
-<PopularMovies {popular}/>
-<Footer/>
+<NavComponent/>
+<!-- image search box -->
 
+
+<div class="bg-gray-100">
+    <HomeTitle/>
+    <SeachMovies/>
+    <PopularMovies {popular}/>
+    <Footer/>
+</div>
 <style>
 
 </style>
