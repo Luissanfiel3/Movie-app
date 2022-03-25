@@ -4,7 +4,7 @@
 
 <div  class="group">
     <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
-        <a href={'/movie/'+movie.id}> <img src="{'https://image.tmdb.org/t/p/w500' + movie.poster_path}"
+        <a sveltekit:prefetch sveltekit:noscroll href={'/movie/'+movie.id}> <img src="{'https://image.tmdb.org/t/p/w500' + movie.poster_path}"
                                            alt="{movie.title}"
                                            class="w-full h-full object-center object-cover group-hover:opacity-75"></a>
     </div>

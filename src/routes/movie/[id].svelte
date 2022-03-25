@@ -14,7 +14,7 @@
         const videoKey = videoDetail.results[0].key
         //console.log(videoDetail.results[0]);
         const movieId = movieDetail.id
-        if (res.ok) {
+        if (res.ok && resVideo.ok) {
             return {
                 props: {movieDetail, movieId,videoKey}
             }
@@ -26,18 +26,20 @@
 
 <script>
     import NavComponent from "../../components/NavComponent.svelte";
+    import {fly} from 'svelte/transition'
     export let movieDetail,videoKey ;
 
 </script>
 
 <NavComponent/>
-<div class="container mx-auto">
+<div class="container mx-auto " in:fly={{y:50, duration:400}} out:fly={{y:10, duration:500,delay:10}}>
+
     <section class="bg-white dark:bg-gray-800 py-5">
         <div class="container flex flex-col px-6 py-10 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
             <div class="flex items-center justify-center w-full h-96 lg:w-1/2">
                 <!--                <img class="object-cover w-full h-full mx-auto rounded-md lg:max-w-2xl"-->
                 <!--                     src={'https://image.tmdb.org/t/p/original' + movieDetail.backdrop_path} alt={movieDetail.title}/>-->
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/{videoKey}"
+                <iframe class="rounded-lg shadow-2xl" width="560" height="315" src="https://www.youtube.com/embed/{videoKey}"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>

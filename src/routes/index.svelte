@@ -20,20 +20,19 @@
     import Footer from "../components/Footer.svelte";
     import SeachMovies from "../components/SeachMovies.svelte";
     import HomeTitle from "../components/HomeTitle.svelte";
+    import {fly} from 'svelte/transition'
 
     export let popular;
 </script>
 
 <NavComponent/>
-<!-- image search box -->
-
-
-<div class="bg-gray-100">
+<div class="bg-gray-100" in:fly={{y:50, duration:400}} out:fly={{y:50, duration:400}}>
     <HomeTitle/>
     <SeachMovies/>
     <PopularMovies {popular}/>
-    <Footer/>
+
 </div>
+<Footer/>
 <style>
 
 </style>
