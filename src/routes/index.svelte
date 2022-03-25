@@ -26,11 +26,10 @@
 </script>
 
 <NavComponent/>
-<div class="bg-gray-100" in:fly={{y:50, duration:400}} out:fly={{y:50, duration:400}}>
+<div class="bg-gray-100" in:fly={{y:50, duration:400, delay:500}} out:fly={{y:50, duration:400, delay: 500}}>
     <HomeTitle/>
     <SeachMovies/>
     <PopularMovies {popular}/>
-
 </div>
 <Footer/>
 <style>

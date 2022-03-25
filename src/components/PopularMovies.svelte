@@ -1,4 +1,6 @@
 <script>
+    import SeachMovies from "./SeachMovies.svelte";
+
     export let popular;
     import MovieCard from "./MovieCard.svelte";
 </script>
